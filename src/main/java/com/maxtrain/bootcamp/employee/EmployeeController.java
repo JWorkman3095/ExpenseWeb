@@ -65,7 +65,7 @@ public class EmployeeController {
 				return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 			}
 			var emp = employeeRepo.findById(employee.getId());
-			if(emp.isEmpty()) {
+			if (emp.isEmpty()) {
 				return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 			}
 			employeeRepo.save(employee);
